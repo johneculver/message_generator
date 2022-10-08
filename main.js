@@ -1,3 +1,6 @@
+//Assignment of button as an element variable
+const element = document.getElementById("button");
+
 const composers = ["Mozart", "Beethoven", "Mahler", "Debussy", "Stranvinsky", "Schumann", "Copland"];
 const verbs = ["leaped over", "leered at", "smelled", "drew", "sniffed", "beguiled", "composed", "conducted", "pranced around"];
 const objects = ["3 delicious hoagies.", "a gaudy mansion.", "a scintillating pond.", "a vibrant meadow.", "an entire apple orchard.", "a roll of parchment.", "the Misty Mountains.", "a large piece of sophisticated machinery."];
@@ -11,4 +14,15 @@ const quoteGenerator = () => {
     return quote;
 }
 
-console.log(quoteGenerator());
+
+
+//console.log(quoteGenerator());
+
+//Creates event listener on button element
+element.addEventListener("click", modifyText);
+
+//Delineates a function that modifies response text
+function modifyText() {
+    document.getElementById("response").innerHTML = quoteGenerator();
+}
+//console.log(returnedQuote);
